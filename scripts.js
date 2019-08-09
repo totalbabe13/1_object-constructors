@@ -11,4 +11,8 @@ function Book(title, author, num_page, have_read) {
   this.author    = author
   this.num_page  = num_page
   this.have_read = have_read
+
+  // this.info = function() {
+  //   return ''
+  // }
 }
