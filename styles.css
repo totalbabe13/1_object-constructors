@@ -2,7 +2,7 @@ body {
   background-color: blue;
 }
 
-p {
+#title {
   color: white;
   font-size: 4em;
 }
