@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title> Odin | Object Constructors</title>
+  <title> Object Constructors</title>
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">
 
@@ -14,36 +14,43 @@
 
 <body>
   <p id="title">B O O K  I T</p>
-  <form id="book" action="index.html" method="post" onsubmit="testSubmitt()">
+  <div class="bookFormDiv">
+    <form id="book-form">
 
-    Title of book:<br>
-    <input id="title1" type="text" name="title" >
-    <br>
-
-    Name of author:<br>
-    <input id="author" type="text" name="author">
-    <br>
-
-    Number of pages:<br>
-    <input id="pages" type="text" name="pages">
-    <br>
-
-    Have you read this book:<br>
-    <input id="read" type="text" name="read">
-    <br>
+      <!-- Title of book:<br> -->
+      <label for="title1"> Title of book: </label>
+      <br>
+      <input id="title1" type="text" name="title-x" >
+      <br>
 
 
-    <input id="hello" type="submit" value="Submit">
-  </form>
-  <div class="container">
-    <div class="test">
-    </div>
-    <div class="test">
-    </div>
-    <div class="test">
-    </div>
+      <label for="author"> Name of author: </label>
+      <br>
+      <input id="author" type="text" name="author-x">
+      <br>
 
+
+      <label for="pages"> Number of pages: </label>
+      <br>
+      <input id="pages" type="text" name="pages-x">
+      <br>
+
+      <label for="read"> Have you read this book: </label>
+      <input id="read" type="text" name="read-x">
+      <br>
+
+      <button id="bookbutton" type="submit"> submit </button>
+    </form>
   </div>
+
+  <!-- <div class="container">
+    <div class="test">
+    </div>
+    <div class="test">
+    </div>
+    <div class="test">
+    </div>
+  </div> -->
   <script src="scripts.js"></script>
 </body>
 </html>
