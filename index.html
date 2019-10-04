@@ -3,54 +3,67 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-
   <title> Object Constructors</title>
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">
-
   <link rel="stylesheet" href="styles.css">
-
 </head>
-
 <body>
-  <p id="title">B O O K  I T</p>
-  <div class="bookFormDiv">
-    <form id="book-form">
 
-      <!-- Title of book:<br> -->
-      <label for="title1"> Title of book: </label>
-      <br>
-      <input id="title1" type="text" name="title-x" >
-      <br>
+  <div class="page-grid">
+ <!-- - - - - - - - - - - - - - - - - - - - - - - -->
+    <div class="header">
+      <h1 id="title">B O O K  I T</h1>
+    </div>
+ <!-- - - - - - - - - - - - - - - - - - - - - - - -->
+    <div class="form-container">
+      <form id="bookForm">
+        <label for="title1"> Title of book: </label>
+        <br>
+        <input id="title1" type="text" name="title-x" >
+        <br>
 
+        <label for="author"> Name of author: </label>
+        <br>
+        <input id="author" type="text" name="author-x">
+        <br>
 
-      <label for="author"> Name of author: </label>
-      <br>
-      <input id="author" type="text" name="author-x">
-      <br>
+        <label for="pages"> Number of pages: </label>
+        <br>
+        <input id="pages" type="text" name="pages-x">
+        <br>
 
-
-      <label for="pages"> Number of pages: </label>
-      <br>
-      <input id="pages" type="text" name="pages-x">
-      <br>
-
-      <label for="read"> Have you read this book: </label>
-      <input id="read" type="text" name="read-x">
-      <br>
-
-      <button id="bookbutton" type="submit"> submit </button>
-    </form>
+        <label for="read"> Have you read this book: </label>
+        <br>
+        <input id="read" type="text" name="read-x">
+        <br>
+        <button id="bookbutton" type="submit"> submit </button>
+      </form>
+    </div>
+<!-- - - - - - - - - - - - - - - - - - - - - - - -->
   </div>
 
-  <!-- <div class="container">
-    <div class="test">
+  <div class="cardsContainer">
+    <div class="bookCard">
+      <!-- - - - - - - - -->
+      <div class="titleContainer">
+        <span id="titleCard"> Title: 100 Years of Solutide </span>
+      </div>
+      <!-- - - - - - - - -->
+      <div class="authorContainer">
+         <span id="authorCard">Author: Gabriel Garcia Marquez </span>
+      </div>
+      <!-- - - - - - - - -->
+      <div class="pagesContainer">
+         <span id="pagesCard">Pages: 334 </span>
+      </div>
+      <!-- - - - - - - - -->
+      <div class="readContainer">
+         <span id="readCard">Read? Yes </span>
+      </div>
     </div>
-    <div class="test">
-    </div>
-    <div class="test">
-    </div>
-  </div> -->
+  </div>
+
   <script src="scripts.js"></script>
 </body>
 </html>

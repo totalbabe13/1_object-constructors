@@ -2,25 +2,83 @@ body {
   background-color: white;
 }
 
+.page-grid {
+  border: 1px solid red;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.header {
+  border: 1px solid blue;
+  grid-column-start: 1;
+  grid-column-end:3;
+}
+
+.form-container {
+  border: 1px solid black;
+  grid-column-start: 1;
+  grid-column-end:3;
+}
+.cardsContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 1px solid #00ffee;
+
+}
+
+.bookCard {
+  height: 35vh;
+  width: 33vh;
+  border: 1px solid orange;
+  margin: 2vh;
+  display: grid;
+  grid-gap: 2px;
+  grid-template-rows: repeat(9,1fr);
+}
+
+.titleContainer {
+  border: 1px solid orange;
+  margin: auto;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.authorContainer {
+  border: 1px solid orange;
+  margin: auto;
+  grid-row-start: 3;
+  grid-row-end: 5;
+}
+
+.pagesContainer {
+  border: 1px solid orange;
+  margin: auto;
+  grid-row-start: 5;
+  grid-row-end: 7;
+}
+
+.readContainer {
+  border: 1px solid orange;
+  margin: auto;
+  grid-row-start: 7;
+  grid-row-end: 9;
+}
+
+#bookForm {
+  border: 1px solid green;
+  text-align: center;
+  /* width: 12em; */
+}
+
 #title {
   font-family: arial;
   color: #cafc03;
   font-size: 4em;
   text-shadow: 0px 3px 3px black, 0 0 5px #0000FF;
   text-align: center;
+
 }
 .book {
   border: 1px solid black;
   margin-bottom: 2vh;
-}
-
-.container {
-  border: 1px solid red;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: 97vw;
-}
-.test {
-  border: 1px solid blue;
-  height: 10vh;
 }
