@@ -19,22 +19,23 @@
  <!-- - - - - - - - - - - - - - - - - - - - - - - -->
      <div class="modal">
        <div class="modal-content">
-
-         <h2>
-           ADD NEW BOOK
-         </h2>
+         <h2>ADD NEW BOOK</h2>
          <p>_______________</p>
-
          <div class="form-container">
-             <input id="title-input"  type="text" name="title-x" required>
+           <form class="" action="index.html" method="post">
+             <input id="title-input"  type="text" name="title-x" placeholder="TITLE"required>
              <br>
-             <input id="author-input" type="text" name="author-x" required>
+             <input id="author-input" type="text" name="author-x"  placeholder="AUTHOR"required >
              <br>
-             <input id="pages-input"  type="text" name="pages-x" required>
+             <input id="pages-input"  type="text" name="pages-x" placeholder="PAGES"required>
              <br>
-             <button id="bookbutton" type="submit"> submit </button>
+             <div class="button-container">
+                <button id="save" type="submit"> SAVE </button>
+                <button id="cancel" type="submit"> CANCEL </button>
+            </div>
            </form>
        </div>
+
      </div>
 
 
