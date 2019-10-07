@@ -2,8 +2,13 @@
 
 let   myLibrary = [];
 const cardsContainer = document.querySelector(".cardsContainer");
-let   submitBookForm = document.getElementById("bookForm");
+let   submitBookForm = document.getElementById("book-form");
       submitBookForm.addEventListener("submit", getFormInput);
+
+
+document.getElementById("plus").addEventListener("click",function(){
+document.querySelector(".modal").style.display = 'flex';
+});
 
 function getFormInput(event) {
   //console.log(this); !!LOOK:
@@ -12,20 +17,17 @@ function getFormInput(event) {
   let currentTitle  = this.querySelector('[name=title-x]').value;
   let currentAuthor = this.querySelector('[name=author-x]').value;
   let currentPages  = this.querySelector('[name=pages-x]').value;
-  let currentRead   = this.querySelector('[name=read-x]').value;
-
-  const userBook = new Book(currentTitle,currentAuthor,currentPages,currentRead);
-  console.log(userBook);
+  const userBook = new Book(currentTitle,currentAuthor,currentPages);
   addBookToLibrary(userBook);
+  document.querySelector(".modal").style.display = 'none';
 };
 
-function Book(title, author, num_page, have_read) {
+function Book(title, author, num_page) {
   this.title     = title
   this.author    = author
   this.num_page  = num_page
-  this.have_read = have_read
+  this.have_read = false
 };
-
 Book.prototype.info = function () {
   return `${this.title}, ${this.author}, ${this.num_page}, ${this.have_read}.`
 };
@@ -36,7 +38,6 @@ function addBookToLibrary(userBook) {
 
 
 function formatBookObject() {
-
 // console.log(myLibrary[0]);
 myLibrary.forEach(function(book) {
 

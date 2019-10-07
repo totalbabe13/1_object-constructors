@@ -53,7 +53,6 @@ h1 {
           transition:         transform .8s ease-in-out;
 }
 
-
 .addButton {
   position: relative;
   background-color: #61e061d9;
@@ -84,7 +83,7 @@ h1 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
+	display: none;
 }
 
 .modal-content {
