@@ -18,40 +18,50 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+/* - - - - - - - - - - - - - - -  */
 
 body {
   background-color: #f1d4ad;
   margin: 0;
 }
 
-.header {
-  /* border: 1px solid blue; */
-  grid-column-start: 1;
-  grid-column-end:3;
-  background-color:#467ff5;
-  width: 100vw;
+h1 {
   padding-top: 3vh;
-  font-size: 1em;
-  padding-bottom: 3vh;
-}
-
-#title {
-  font-family: arial;
+  background-color: #0074D9;
+  font-size: 2em;
   color: white;
-  font-size: 3em;
   text-align: center;
-}
-
-.bookmark {
-  left: 82vh;
-  position: relative;
-  bottom: 10vh;
+  height: 9vh;
 }
 
 #logo {
-  height: 19vh;
+  text-align: center;
+  margin: auto;
+  position: relative;
+  height: 13vh;
+  left: 75vw;
+  bottom: 8vh;
+}
+#plus {
+  display: block;
+  height: 4em;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1em;
 }
 
+.addButton {
+  position: relative;
+  background-color: #61e061d9;
+  width: 6em;
+  height: 6em;
+  border-radius: 4em;
+  left: 86vw;
+  bottom: 18vh;
+  box-shadow: 0 3px 8px 0 rgba(0,0,0,.2), 0 0 0 1px rgba(0,0,0,.08);
+
+}
+/* - - - - - - - - - - - - - - -  */
 
 .form-container {
   border: 1px solid black;
