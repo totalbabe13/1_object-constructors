@@ -70,8 +70,8 @@ h1 {
 
 .addButton:hover {
   background-color: #61e061;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 /* - - - - - - - - - - - - - - -  */
 .modal {
@@ -144,9 +144,6 @@ p {
   border: 4px solid transparent;
 }
 
-.button-container {
-	margin-top: 1em;
-}
 
 button {
     width: 12em;
@@ -166,10 +163,6 @@ button {
 
 /* - - - - - - - - - - - - - - -  */
 
-
-
-
-
 .cardsContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -178,50 +171,77 @@ button {
 }
 
 .bookCard {
-  height: 35vh;
+  height: 45vh;
   width: 33vh;
   border: 1px solid orange;
   margin: 2vh;
-  display: grid;
-  grid-gap: 2px;
-  grid-template-rows: repeat(9,1fr);
+	background-color: #4cbb97;
+	margin: 0 1em 1.5em;
+  padding: 1.25em;
+  box-shadow: inset 14px 0px 4px 0px rgba(0,0,0,0.1);
 }
-
-span {
+           /* - - - - - - - - - - - - - - -  */
+.title-tag {
+	padding-top: 4vh;
+  padding-bottom: 4vh;
   text-align: center;
+  color: white;
+  font-size: 1.2em;
+  color: #565656;
+	font-family: 'Abril Fatface', cursive;
 }
 
-.titleContainer {
-  border: 1px solid orange;
-  margin: auto;
-  grid-row-start: 1;
-  grid-row-end: 3;
+.divider {
+  color: #536c62;
 }
 
 .authorContainer {
-  border: 1px solid orange;
-  margin: auto;
-  grid-row-start: 3;
-  grid-row-end: 5;
+	text-align: center;
+}
+.author-tag {
+	color: #565656;
+  font-family: 'Lato', sans-serif;
+}
+
+.buttons-container {
+	text-align: center;
+  margin-top: 2em;
+}
+
+.open-book {
+  text-align: center;
+  background-color: white;
+  height: 3.8em;
+  width: 3.8em;
+  border-radius: 20px;
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.open-icon {
+	height: 2.5em;
+}
+
+.delete-book {
+	text-align: center;
+  background-color: white;
+  height: 3.8em;
+  width: 3.8em;
+  border-radius: 20px;
+	display: inline-block;
+}
+
+.delete-icon {
+	height: 2.5em;
 }
 
 .pagesContainer {
-  border: 1px solid orange;
-  margin: auto;
-  grid-row-start: 5;
-  grid-row-end: 7;
+	text-align: center;
+	margin-top: 14vh;
 }
 
-.readContainer {
-  border: 1px solid orange;
-  margin: auto;
-  grid-row-start: 7;
-  grid-row-end: 9;
+.pages-tag {
+	color: #565656;
+  font-family: 'Lato', sans-serif;
 }
-
-\
-
-.book {
-  border: 1px solid black;
-  margin-bottom: 2vh;
-}
+/* font-family: 'Lato', sans-serif; */
