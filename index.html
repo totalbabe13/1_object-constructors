@@ -10,8 +10,7 @@
   <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 </head>
-<body>
-
+<body id="body">
  <!-- - - - - - - - - - - - - - - - - - - - - - - -->
      <h1>B O O K  I T</h1>
      <img id="logo" src="images/bookmark.jpg" alt="bookmark logo">
@@ -25,30 +24,30 @@
          <p>_______________</p>
          <div class="form-container">
            <form id="book-form">
-             <input id="title-input"  type="text" name="title-x" placeholder="TITLE"required>
+             <input id="title-input"  type="text" name="title-x" placeholder="TITLE">
              <br>
-             <input id="author-input" type="text" name="author-x"  placeholder="AUTHOR"required >
+             <input id="author-input" type="text" name="author-x"  placeholder="AUTHOR" >
              <br>
-             <input id="pages-input"  type="text" name="pages-x" placeholder="PAGES"required>
+             <input id="pages-input"  type="text" name="pages-x" placeholder="PAGES">
              <br>
              <div class="button-container">
                 <button id="save" type="submit"> SAVE </button>
-                <button id="cancel" type="submit"> CANCEL </button>
+                <button id="cancel" type="reset"> CANCEL </button>
             </div>
            </form>
        </div>
      </div>
    </div>
 <!-- - - - - - - - - - - - - - - - - - - - - - - -->
+  <div id="cardsContainer">
 
-  <div class="cardsContainer">
     <div class="bookCard">
 
-      <h2 class="title-tag">100 Years of Solutide </h2>
+      <h2 class="title-tag">Sample Book Title </h2>
       <p class="divider">___________</p>
 
       <div class="authorContainer">
-         <span class="author-tag">Gabriel Garcia Marquez </span>
+         <span class="author-tag">Sample Author </span>
       </div>
 
       <div class="buttons-container">
@@ -61,7 +60,7 @@
       </div>
 
       <div class="pagesContainer">
-         <span class="pages-tag">334 Pages </span>
+         <span class="pages-tag">100 Pages </span>
       </div>
     </div>
   </div>
