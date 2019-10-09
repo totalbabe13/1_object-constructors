@@ -10,7 +10,6 @@ let   cardsContainer = document.getElementById("cardsContainer");
 let   saveButton     = document.getElementById("save");
 let   cancelButton   = document.getElementById("cancel");
 
-
 function Book(title, author, num_page) {
   this.title     = title
   this.author    = author
@@ -42,21 +41,27 @@ function closeModal(event){
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 //Edit Card info / toggle
 function removeBook(book_id){
-
   let card = document.getElementById(book_id).parentElement.parentElement
-  let cardIndexNum = card.dataset.index
+  let cardIndexNum = parseInt(card.dataset.index);
   let parentElement = document.getElementById(book_id).parentElement.parentElement.parentElement
-
   parentElement.removeChild(card);
-  console.log(Number.isInteger(cardIndexNum));
-  // for( var i = 0; i < myLibrary.length; i++){
-  //  if ( i === cardIndexNum) {
-  //    arr.splice(i, 1);
-  //    i--;
-  //    }
-  //  }
+  for( var i = 0; i < myLibrary.length; i++){
+   if ( i === cardIndexNum) {
+     myLibrary.splice(i, 1);
+     }
+   }
 };
 
+function toggleRead(book_id){
+  let card = document.getElementById(book_id).parentElement.parentElement
+  let cardIndexNum = parseInt(card.dataset.index);
+  console.log(cardIndexNum);
+  for( var i = 0; i < myLibrary.length; i++){
+   if ( i === cardIndexNum) {
+     myLibrary[i].have_read = true;
+     }
+   }
+}
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // FORM display input/save object
 function saveBook(event) {
@@ -108,24 +113,31 @@ function formatBookObject() {
 
 // < - - Buttons ELEMENT - - >
   let buttonContainer = document.createElement("div");
+  let readToggle      = document.createElement("input")
   let openButton      = document.createElement("button");
   let deleteButton    = document.createElement("button");
   let openIcon        = document.createElement('img');
   let deleteIcon      = document.createElement('img');
 
+
 buttonContainer.className = "buttons-container";
+readToggle.className      = "check-read"
 openButton.className      = "open-book";
 deleteButton.className    = "delete-book";
 openIcon.className        = "open-icon";
 deleteIcon.className      = "delete-icon";
-deleteButton.id           = `id${index}`
+deleteButton.id           = `id${index}`;
+readToggle.id             = `id${index}`;
 
 bookCard.appendChild(buttonContainer);
+buttonContainer.appendChild(readToggle);
 buttonContainer.appendChild(openButton);
 buttonContainer.appendChild(deleteButton);
 openButton.appendChild(openIcon);
 deleteButton.appendChild(deleteIcon);
 
+readToggle.setAttribute('type','checkbox')
+readToggle.setAttribute('onclick','toggleRead(this.id)')
 openIcon.setAttribute("src","images/open-book.svg")
 openButton.setAttribute("data-index", `${myLibrary.length}`)
 deleteIcon.setAttribute("src","images/delete.svg")
