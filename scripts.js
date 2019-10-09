@@ -10,6 +10,7 @@ let   cardsContainer = document.getElementById("cardsContainer");
 let   saveButton     = document.getElementById("save");
 let   cancelButton   = document.getElementById("cancel");
 
+
 function Book(title, author, num_page) {
   this.title     = title
   this.author    = author
@@ -38,7 +39,25 @@ function showModal(event){
 function closeModal(event){
   document.querySelector(".modal").style.display = 'none';
 }
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+//Edit Card info / toggle
+function removeBook(book_id){
 
+  let card = document.getElementById(book_id).parentElement.parentElement
+  let cardIndexNum = card.dataset.index
+  let parentElement = document.getElementById(book_id).parentElement.parentElement.parentElement
+
+  parentElement.removeChild(card);
+  console.log(Number.isInteger(cardIndexNum));
+  // for( var i = 0; i < myLibrary.length; i++){
+  //  if ( i === cardIndexNum) {
+  //    arr.splice(i, 1);
+  //    i--;
+  //    }
+  //  }
+};
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // FORM display input/save object
 function saveBook(event) {
   event.preventDefault();
@@ -58,10 +77,10 @@ function formatBookObject() {
   refreshlibrary.setAttribute("id", "cardsContainer");
   body.appendChild(refreshlibrary);
 
-  myLibrary.forEach(function(book) {
+  myLibrary.forEach(function(book,index) {
   let bookCard = document.createElement("div");
-
   bookCard.className = "bookCard";
+  bookCard.setAttribute("data-index",`${index}`)
   refreshlibrary.appendChild(bookCard);
 
 // < - - Title ELEMENT - - >
@@ -99,6 +118,7 @@ openButton.className      = "open-book";
 deleteButton.className    = "delete-book";
 openIcon.className        = "open-icon";
 deleteIcon.className      = "delete-icon";
+deleteButton.id           = `id${index}`
 
 bookCard.appendChild(buttonContainer);
 buttonContainer.appendChild(openButton);
@@ -107,7 +127,10 @@ openButton.appendChild(openIcon);
 deleteButton.appendChild(deleteIcon);
 
 openIcon.setAttribute("src","images/open-book.svg")
+openButton.setAttribute("data-index", `${myLibrary.length}`)
 deleteIcon.setAttribute("src","images/delete.svg")
+deleteButton.setAttribute('onclick',"removeBook(this.id)")
+
 
 // < - - Pages ELEMENT - - >
   let bookPagesContainer = document.createElement("div");

@@ -218,6 +218,15 @@ button {
 	margin-right: 1em;
 }
 
+.closed {
+	text-align: center;
+  background-color: white;
+  height: 3.8em;
+  width: 3.8em;
+  border-radius: 20px;
+	display: inline-block;
+	margin-right: 1em;
+}
 .open-icon {
 	height: 2.5em;
 }
